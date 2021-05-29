@@ -18,6 +18,10 @@
   overflow-y: scroll;
 }
 
+.consola > pre {
+  color: inherit;
+}
+
 .contenedor-boton {
   margin-bottom: 25px;
 }
