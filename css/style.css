@@ -1,4 +1,23 @@
-.container-principal {
+.contenedor-row {
+  min-height: 100vh;
 }
 
-.boton;
+.contenedor-principal {
+  background-color: #90a081;
+}
+
+.barra-lateral {
+  background-color: #f1ac7b;
+}
+
+.consola {
+  background-color: #000;
+  color: #0dbc79;
+  height: 80%;
+  width: 95%;
+  overflow-y: scroll;
+}
+
+.contenedor-boton {
+  margin-bottom: 25px;
+}
