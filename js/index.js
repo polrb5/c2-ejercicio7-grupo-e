@@ -91,6 +91,13 @@ const equiposProvincia = (equipos, provinciaEmpleado) =>
       provincia.toLowerCase() === provinciaEmpleado.toLowerCase()
   );
 
+const provincias = (equipos) =>
+  equipos
+    .map((equipo) => equipo.asignado.provincia)
+    .filter(
+      (provincia, index, provincias) => provincias.indexOf(provincia) === index
+    );
+
 const edadMedia = (equipos) =>
   equipos.reduce(
     (
