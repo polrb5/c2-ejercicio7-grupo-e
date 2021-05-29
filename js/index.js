@@ -90,3 +90,18 @@ const equiposProvincia = (equipos, provinciaEmpleado) =>
     ({ asignado: { provincia } }) =>
       provincia.toLowerCase() === provinciaEmpleado.toLowerCase()
   );
+
+const edadMedia = (equipos) =>
+  equipos.reduce(
+    (
+      totalEdad,
+      {
+        asignado: {
+          empleado: { edad },
+        },
+      },
+      i,
+      empleados
+    ) => totalEdad + edad / empleados.length,
+    0
+  );
