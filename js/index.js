@@ -140,3 +140,10 @@ const equiposTipo = (equipos, tipoEquipo) =>
   equipos.filter(
     (equipo) => equipo.tipo.toLowerCase() === tipoEquipo.toLowerCase()
   );
+
+// Punt 8
+
+const trabajadoresTipo = (equipos, tipoEquipo) =>
+  equipos
+    .filter((equipo) => equipo.tipo.toLowerCase() === tipoEquipo.toLowerCase())
+    .map((equipo) => equipo.asignado.empleado);
