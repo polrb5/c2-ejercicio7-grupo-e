@@ -150,7 +150,7 @@ const trabajadoresTipo = (equipos, tipoEquipo) =>
 
 // Punt 9
 
-/* const equiposPorTipo = (equipos) => equipos.map((equipo) => equipo); */
+const equiposPorTipo = (equipos) => equipos.map(({ tipo }) => ({ tipo }));
 // Punt 10
 
 const equiposTipoLocalidad = (equipos, tipoEquipo, localidad) =>
