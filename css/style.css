@@ -13,13 +13,14 @@
 .consola {
   background-color: #000;
   color: #16bc6a;
-  height: 80%;
+  height: 600px;
   width: 95%;
-  overflow-y: scroll;
+  padding: 5px 10px;
 }
 
 .consola > pre {
   color: inherit;
+  height: 100%;
 }
 
 .contenedor-boton {
