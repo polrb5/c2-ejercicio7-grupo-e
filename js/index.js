@@ -76,6 +76,8 @@
   },
 ]; */
 
+// Punt 1
+
 const equiposMayoresEdad = (equipos, edadEmpleado) =>
   equipos.filter(
     ({
@@ -85,11 +87,15 @@ const equiposMayoresEdad = (equipos, edadEmpleado) =>
     }) => edad > edadEmpleado
   );
 
+// Punt 2
+
 const equiposProvincia = (equipos, provinciaEmpleado) =>
   equipos.filter(
     ({ asignado: { provincia } }) =>
       provincia.toLowerCase() === provinciaEmpleado.toLowerCase()
   );
+
+// Punt 3
 
 const provincias = (equipos) =>
   equipos
@@ -98,7 +104,12 @@ const provincias = (equipos) =>
       (provincia, index, provincias) => provincias.indexOf(provincia) === index
     );
 
-/* const puestos  */
+// Punt 4
+
+const puestos = (equipos) =>
+  equipos.map((equipo) => equipo.asignado.empleado.puesto);
+
+// Punt 5
 
 const edadMedia = (equipos) =>
   equipos.reduce(
@@ -114,6 +125,8 @@ const edadMedia = (equipos) =>
     ) => totalEdad + edad / empleados.length,
     0
   );
+
+// Punt 6
 
 const equiposPorEdad = (equipos) =>
   equipos.sort(
