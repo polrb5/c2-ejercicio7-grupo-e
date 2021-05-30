@@ -98,6 +98,8 @@ const provincias = (equipos) =>
       (provincia, index, provincias) => provincias.indexOf(provincia) === index
     );
 
+/* const puestos  */
+
 const edadMedia = (equipos) =>
   equipos.reduce(
     (
@@ -111,4 +113,10 @@ const edadMedia = (equipos) =>
       empleados
     ) => totalEdad + edad / empleados.length,
     0
+  );
+
+const equiposPorEdad = (equipos) =>
+  equipos.sort(
+    (equipos1, equipos2) =>
+      equipos1.asignado.empleado.edad - equipos2.asignado.empleado.edad
   );
