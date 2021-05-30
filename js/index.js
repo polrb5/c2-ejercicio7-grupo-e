@@ -148,6 +148,9 @@ const trabajadoresTipo = (equipos, tipoEquipo) =>
     .filter((equipo) => equipo.tipo.toLowerCase() === tipoEquipo.toLowerCase())
     .map((equipo) => equipo.asignado.empleado);
 
+// Punt 9
+
+/* const equiposPorTipo = (equipos) => equipos.map((equipo) => equipo); */
 // Punt 10
 
 const equiposTipoLocalidad = (equipos, tipoEquipo, localidad) =>
@@ -156,3 +159,12 @@ const equiposTipoLocalidad = (equipos, tipoEquipo, localidad) =>
       equipo.tipo.toLowerCase() === tipoEquipo.toLowerCase() &&
       equipo.asignado.provincia.toLowerCase() === localidad.toLowerCase()
   );
+
+// Punt 11
+
+const resumenEquipos = (equipos) =>
+  equipos.map(({ id, asignado: { poblacion, provincia } }) => ({
+    id,
+    poblacion,
+    provincia,
+  }));
