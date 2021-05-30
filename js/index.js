@@ -151,9 +151,8 @@ const trabajadoresTipo = (equipos, tipoEquipo) =>
 // Punt 10
 
 const equiposTipoLocalidad = (equipos, tipoEquipo, localidad) =>
-  equipos
-    .filter((equipo) => equipo.tipo.toLowerCase() === tipoEquipo.toLowerCase())
-    .filter(
-      (equipo) =>
-        equipo.asignado.poblacion.toLowerCase() === localidad.toLowerCase()
-    );
+  equipos.filter(
+    (equipo) =>
+      equipo.tipo.toLowerCase() === tipoEquipo.toLowerCase() &&
+      equipo.asignado.provincia.toLowerCase() === localidad.toLowerCase()
+  );
