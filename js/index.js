@@ -133,3 +133,10 @@ const equiposPorEdad = (equipos) =>
     (equipos1, equipos2) =>
       equipos1.asignado.empleado.edad - equipos2.asignado.empleado.edad
   );
+
+// Punt 7
+
+const equiposTipo = (equipos, tipoEquipo) =>
+  equipos.filter(
+    (equipo) => equipo.tipo.toLowerCase() === tipoEquipo.toLowerCase()
+  );
