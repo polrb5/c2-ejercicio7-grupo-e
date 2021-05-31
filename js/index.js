@@ -112,7 +112,7 @@ const puestos = (equipos) =>
       asignado: {
         empleado: { puesto },
       },
-    }) => ({ puesto })
+    }) => puesto
   );
 
 // Punt 5
@@ -125,10 +125,8 @@ const edadMedia = (equipos) =>
         asignado: {
           empleado: { edad },
         },
-      },
-      i,
-      empleados
-    ) => totalEdad + edad / empleados.length,
+      }
+    ) => totalEdad + edad / equipos.length,
     0
   );
 
