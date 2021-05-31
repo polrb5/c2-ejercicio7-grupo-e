@@ -107,7 +107,13 @@ const provincias = (equipos) =>
 // Punt 4
 
 const puestos = (equipos) =>
-  equipos.map((equipo) => equipo.asignado.empleado.puesto);
+  equipos.map(
+    ({
+      asignado: {
+        empleado: { puesto },
+      },
+    }) => ({ puesto })
+  );
 
 // Punt 5
 
